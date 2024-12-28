@@ -41,6 +41,7 @@ function canGenPoints(){
 function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
+	if (hasUpgrade('p', 11)) gain = gain.times(2)
 
 	let gain = new Decimal(1000)
 	return gain
@@ -79,7 +80,8 @@ function fixOldSave(oldVersion){
 }
 upgrades: {
     11: {
-        description: "Blah",
-        cost: new Decimal(100),
+		title: "Make this whatever you want!",
+		description: "Double your point gain.",
+		cost: new Decimal(1),
     },
 }
