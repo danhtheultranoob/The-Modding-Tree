@@ -77,3 +77,9 @@ function maxTickLength() {
 // you can cap their current resources with this.
 function fixOldSave(oldVersion){
 }
+upgrades: {
+    11: {
+        description: "Blah",
+        cost: new Decimal(100),
+    },
+}
