@@ -59,7 +59,13 @@ var displayThings = [
 function isEndgame() {
 	return player.points.gte(new Decimal("e280000000"))
 }
-
+upgrades: {
+    11; {
+		title: "No"
+        description: "Blah",
+        cost; new Decimal(100),
+    }
+}
 
 
 // Less important things beyond this point!
@@ -77,11 +83,4 @@ function maxTickLength() {
 // Use this if you need to undo inflation from an older version. If the version is older than the version that fixed the issue,
 // you can cap their current resources with this.
 function fixOldSave(oldVersion){
-}
-upgrades: {
-    11: {
-		title: "Make this whatever you want!",
-		description: "Double your point gain.",
-		cost: new Decimal(1),
-    },
 }
