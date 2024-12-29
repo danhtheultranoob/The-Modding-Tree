@@ -59,13 +59,12 @@ var displayThings = [
 function isEndgame() {
 	return player.points.gte(new Decimal("e280000000"))
 }
-upgrades: {
-    11; {
-		title: "No"
-        description: "Blah",
-        cost; new Decimal(100),
+milestones: {
+    0; {
+        requirementDescription: "123 waffles",
+        effectDescription; "blah",
+        done() ; return player.w.points.gte(123) }
     }
-}
 
 
 // Less important things beyond this point!
